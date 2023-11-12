@@ -1,4 +1,3 @@
-Penguin part 5
 Base-DT Model:
 Hyperparameters: Default
 (B) Confusion Matrix:
@@ -22,23 +21,45 @@ weighted avg       1.00      1.00      1.00        67
 --------------------
 Top Decision Tree Model:
 (A) Model Description:
-Top Decision Tree with hyperparameters: {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 2}
+Top Decision Tree with hyperparameters: {'criterion': 'gini', 'max_depth': 5, 'min_samples_split': 2}
 (B) Confusion Matrix:
-[[31  0  0]
+[[30  1  0]
  [ 0 13  0]
  [ 0  0 23]]
 (C) Precision, Recall, and F1:
               precision    recall  f1-score   support
 
-      Adelie       1.00      1.00      1.00        31
-   Chinstrap       1.00      1.00      1.00        13
+      Adelie       1.00      0.97      0.98        31
+   Chinstrap       0.93      1.00      0.96        13
       Gentoo       1.00      1.00      1.00        23
 
-    accuracy                           1.00        67
-   macro avg       1.00      1.00      1.00        67
-weighted avg       1.00      1.00      1.00        67
+    accuracy                           0.99        67
+   macro avg       0.98      0.99      0.98        67
+weighted avg       0.99      0.99      0.99        67
 
-(D) Accuracy: 1.0
-(D) Macro-average F1: 1.0
-(D) Weighted-average F1: 1.0
+(D) Accuracy: 0.9850746268656716
+(D) Macro-average F1: 0.9821898401133374
+(D) Weighted-average F1: 0.9852286835404036
+--------------------
+Base MLP Model:
+(A) Model Description:
+Base Multi-Layered Perceptron with 2 hidden layers of 100+100 neurons, sigmoid/logistic as activation function, stochastic gradient descent, and default values for the rest of the parameters.
+(B) Confusion Matrix:
+[[31  0  0]
+ [13  0  0]
+ [23  0  0]]
+(C) Precision, Recall, and F1:
+              precision    recall  f1-score   support
+
+      Adelie       0.46      1.00      0.63        31
+   Chinstrap       1.00      0.00      0.00        13
+      Gentoo       1.00      0.00      0.00        23
+
+    accuracy                           0.46        67
+   macro avg       0.82      0.33      0.21        67
+weighted avg       0.75      0.46      0.29        67
+
+(D) Accuracy: 0.4626865671641791
+(D) Macro-average F1: 0.2108843537414966
+(D) Weighted-average F1: 0.29272007310386844
 --------------------
