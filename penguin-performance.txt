@@ -1,84 +1,48 @@
-Base-DT Model:
-Hyperparameters: Default
-Confusion Matrix:
+Part 5 Penguin Data Set
+--------------------
+Base Decision Tree Model
+
+(B) Confusion Matrix:
 [[31  0  0]
  [ 0 13  0]
  [ 0  0 23]]
-Precision, Recall, and F1:
-              precision    recall  f1-score   support
 
-      Adelie       1.00      1.00      1.00        31
-   Chinstrap       1.00      1.00      1.00        13
-      Gentoo       1.00      1.00      1.00        23
+(C) Precision, Recall, and F1-Score for Each Class:
+(array([1., 1., 1.]), array([1., 1., 1.]), array([1., 1., 1.]), array([31, 13, 23], dtype=int64))
 
-    accuracy                           1.00        67
-   macro avg       1.00      1.00      1.00        67
-weighted avg       1.00      1.00      1.00        67
+(D) Accuracy: 1.0
+(D) Macro-average F1: 1.0
+(D) Weighted-average F1: 1.0
+--------------------
+Top Decision Tree Model
 
-Accuracy, Macro-average F1, Weighted-average F1:
-1.0
---------------------------------------------------
-
-Top-DT Model:
-Best Hyperparameters: {'criterion': 'gini', 'max_depth': None, 'min_samples_split': 2}
-Confusion Matrix:
-[[31  0  0]
+(B) Confusion Matrix:
+[[30  1  0]
  [ 0 13  0]
  [ 0  0 23]]
-Precision, Recall, and F1:
-              precision    recall  f1-score   support
 
-      Adelie       1.00      1.00      1.00        31
-   Chinstrap       1.00      1.00      1.00        13
-      Gentoo       1.00      1.00      1.00        23
+(C) Precision, Recall, and F1-Score for Each Class:
+Precision (Class 0 - Adelie): 1.0
+Recall (Class 0 - Adelie): 0.967741935483871
+F1-Score (Class 0 - Adelie): 0.9836065573770492
 
-    accuracy                           1.00        67
-   macro avg       1.00      1.00      1.00        67
-weighted avg       1.00      1.00      1.00        67
+(D) Accuracy: 0.9850746268656716
+(D) Macro-average F1: 0.9821898401133374
+(D) Weighted-average F1: 0.9852286835404036
+--------------------
+Base MLP Model
 
-Accuracy, Macro-average F1, Weighted-average F1:
-1.0
---------------------------------------------------
+(A) Model Description:
+Base Multi-Layered Perceptron with 2 hidden layers of 100+100 neurons, sigmoid/logistic as activation function, stochastic gradient descent, and default values for the rest of the parameters.
 
-Base-MLP Model:
-Hyperparameters: Default
-Confusion Matrix:
+(B) Confusion Matrix:
 [[31  0  0]
  [13  0  0]
  [23  0  0]]
-Precision, Recall, and F1:
-              precision    recall  f1-score   support
 
-      Adelie       0.46      1.00      0.63        31
-   Chinstrap       0.00      0.00      0.00        13
-      Gentoo       0.00      0.00      0.00        23
+(C) Precision, Recall, and F1-Score for Each Class:
+(array([0.46268657, 1.        , 1.        ]), array([1., 0., 0.]), array([0.63265306, 0.        , 0.        ]), array([31, 13, 23], dtype=int64))
 
-    accuracy                           0.46        67
-   macro avg       0.15      0.33      0.21        67
-weighted avg       0.21      0.46      0.29        67
-
-Accuracy, Macro-average F1, Weighted-average F1:
-0.4626865671641791
---------------------------------------------------
-
-Top-MLP Model:
-Best Hyperparameters: {'activation': 'tanh', 'hidden_layer_sizes': (30, 50), 'max_iter': 500, 'solver': 'adam'}
-Confusion Matrix:
-[[26  0  5]
- [13  0  0]
- [ 7  0 16]]
-Precision, Recall, and F1:
-              precision    recall  f1-score   support
-
-      Adelie       0.57      0.84      0.68        31
-   Chinstrap       0.00      0.00      0.00        13
-      Gentoo       0.76      0.70      0.73        23
-
-    accuracy                           0.63        67
-   macro avg       0.44      0.51      0.47        67
-weighted avg       0.52      0.63      0.56        67
-
-Accuracy, Macro-average F1, Weighted-average F1:
-0.6268656716417911
---------------------------------------------------
-
+(D) Accuracy: 0.4626865671641791
+(D) Macro-average F1: 0.2108843537414966
+(D) Weighted-average F1: 0.29272007310386844
