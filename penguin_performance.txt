@@ -1,0 +1,22 @@
+Penguin part 5
+Base-DT Model:
+Hyperparameters: Default
+(B) Confusion Matrix:
+[[31  0  0]
+ [ 0 13  0]
+ [ 0  0 23]]
+(C) Precision, Recall, and F1:
+              precision    recall  f1-score   support
+
+      Adelie       1.00      1.00      1.00        31
+   Chinstrap       1.00      1.00      1.00        13
+      Gentoo       1.00      1.00      1.00        23
+
+    accuracy                           1.00        67
+   macro avg       1.00      1.00      1.00        67
+weighted avg       1.00      1.00      1.00        67
+
+(D) Accuracy: 1.0
+(D) Macro-average F1: 1.0
+(D) Weighted-average F1: 1.0
+--------------------
